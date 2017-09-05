@@ -4,12 +4,17 @@
 var app = angular.module("BookstoreApp", ['ngRoute']);
 
 app.config(function($routeProvider) {
-	$routeProvider.
-	when('/', {
+	$routeProvider
+	.when('/', {
+		// '/' says "when you are at homepage"
+		templateUrl: 'partials/marquee.html',
+		controller: ""
+	})
+	.when('/getstarted', {
 		// '/' says "when you are at homepage"
 		templateUrl: 'partials/book-list.html',
 		controller: "bookCtrl"
-	}).
-	otherwise('/');
+	})
+	.otherwise('/');
 });
 // routeProvider looks at URL, and displays content based on that
